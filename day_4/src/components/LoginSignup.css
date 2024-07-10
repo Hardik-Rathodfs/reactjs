@@ -1,0 +1,19 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.forms{
+    border: 3px solid;
+    background-color: rgb(171, 237, 215);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 400px;
+}
+
+.frm{
+    border-radius:15px ;
+    border: 0.5 px solid;
+}

@@ -18,20 +18,52 @@ function Form() {
       const[pass,setpass]=useState(null)
       const [viewPass,setviewPass] = useState(false)      
       const [isFocused, setIsFocused] = useState(false); 
+      const [isFocusedd, setIsFocusedd] = useState(false); 
       const [isblur, setisbliur] = useState(false); 
+      const [isblurr, setisbliurr] = useState(false); 
       const [mailField,setmailField] = useState(true);
+      const [mailFieldd,setmailFieldd] = useState(true);
       const [number,setNumber] = useState(true);
       const [useField,setuseField] = useState(true);
 
-      const [arry,setArry] = useState(["skill","skill"])
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&])[A-Za-z\d@.#$!%*?&]{8,25}$/;
   
     const handleChange=(e)=>{
         let{name,value}=e.target
         setobj({...obj,[name]:value})
+
     }
+    const handleChangee=(e)=>{
+      let{name,value}=e.target
+      setobj({...obj,[name]:value})
 
+  }
 
+    const handleSubmitt = (e) => {
+      e.preventDefault();
+      setarr([...arr, obj]);
+      setobj({
+        username:"",
+        phone:"",
+          email: "",
+          password: ""
+      });
+    
+      if (passwordRegex.test(obj.password)) {
+        Swal.fire({
+          icon: "success",
+          title: "Register Sucessfully!",
+          text: "Thank you",
+        });
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something went wrong!",
+        });
+      }
+    };
+    
 
 const handleSubmit = (e) => {
   e.preventDefault();
@@ -68,6 +100,16 @@ const mailBlur = ()=>{
   }
   
 }
+const mailBlurr = ()=>{
+  if(obj.email.includes('@gmail.com') || obj.email.includes('@yahoo.com') || obj.email.includes('@email.com'))
+  {
+      setmailFieldd(true)
+  }
+  else{
+      setmailFieldd(false)
+  }
+  
+}
  
 
 const handleBlur =()=>{
@@ -84,6 +126,19 @@ const handleBlur =()=>{
 
   }
 
+  const handleBlurr =()=>{
+    let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&])[A-Za-z\d@.#$!%*?&]{8,22}$/; 
+    
+     console.log(viewPass)
+     setIsFocusedd(false)
+      if(regex.test(obj.password)){
+        setisbliurr(false);
+  
+      }else{
+        setisbliurr(true)
+      }
+  
+    }
  const handleFocus = ()=>{
   
  
@@ -92,7 +147,14 @@ const handleBlur =()=>{
    
  }
 }
-
+const handleFocuss = ()=>{
+  
+ 
+  if(isblurr == false){
+    setIsFocusedd(true)
+    
+  }
+ }
 const usernameBlur = ()=>{
   if(obj.username.length > 5)
   {
@@ -113,9 +175,7 @@ const numberBlur = ()=>{
       setNumber(false)
   }
 }
-const handleClick = ()=>{
-  setArry([...arr,"skill"])
-}
+
 
   return (
     <>
@@ -123,27 +183,28 @@ const handleClick = ()=>{
           <div class="container" >
       <div class="wrapper">
         <div class="title"><span>Login Form</span></div>
-        <form  onSubmit={handleSubmit}>
+        <form  onSubmit={handleSubmitt}>
           <div class="row">
             <i class="fas fa-envelope"></i>
-            <input type="email" onChange={handleChange} value={obj.email} name='email' onBlur={mailBlur} 
+            <input type="email" onChange={handleChange} value={obj.email} name='email' onBlur={mailBlurr} 
              placeholder="Email or Phone"
-             id={mailField ? "mailunchange" : "mailchange"}
+             id={mailFieldd ? "mailunchange" : "mailchange"}
              required/>
-            {mailField ? "" : <p className='em'>Please Enter Email Correctly</p>}
+            {mailFieldd ? "" : <p className='em'>Please Enter Email Correctly</p>}
           </div>
           <div class="row">
        
-            {viewPass==false ? <span onClick={()=>setviewPass(true)} >
+            {viewPass==false ? <span onClick={()=>setviewPass(true)}>
             <i class="fas fa-lock"></i>
-            </span> : <span onClick={()=>setviewPass(false)} >
+            </span> : <span onClick={()=>setviewPass(false)}>
             <i class="fas fa-lock"></i>
             </span>}
          
             <input type={viewPass ?  "text" : "password"} className={pass == false ? 'a' : ""}   
-            name='password' value={obj.password} onChange={handleChange} onBlur={handleBlur} onFocus={handleFocus} placeholder="Password" required/>
-           {isFocused ==false  ? "" : <p className='red1'>Password include special character</p>}
-           {isblur == false  ? " " :<p className='red'>Password must be 8 character</p>}
+            name='password' value={obj.password} onChange={handleChangee} onBlur={handleBlurr} onFocus={handleFocuss}
+             placeholder="Password" required/>
+           {isFocusedd ==false  ? "" : <p className='red1'>Password include special character</p>}
+           {isblurr == false  ? " " :<p className='red'>Password must be 8 character</p>}
           </div>
         <div class="pass"><a href="#">Forgot password?</a></div>
           <div class="row button">
@@ -169,7 +230,7 @@ const handleClick = ()=>{
         <div className="row">
         <i class="fas fa-phone"></i>
 
-      <input type="tel" name="phone" placeholder="+91 1234567890" required onChange={handleChange} 
+      <input type="tel" name="phone" placeholder="+91 6353123475" required onChange={handleChange} 
       value={obj.phone} onBlur={numberBlur} id={number ? "numberunchange" : "numberchange"}/>
       {number ? "" : <p className='emm'>Phone Number Must Be Atleast 10 Digit</p>}
       

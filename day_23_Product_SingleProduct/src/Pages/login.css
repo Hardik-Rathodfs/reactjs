@@ -1,0 +1,64 @@
+.div{width: 100%;
+    background-color: #f3f3f3;
+    height: 803px;
+    padding-top: 50px;
+    position: relative;
+    }
+    .login{
+      
+      width: 400px;
+      height: 640px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      border-radius: 10px;
+      margin: auto;
+      text-align: center;
+      background-color: white;
+      padding: 30px;
+      
+    
+    }
+    .login h2{
+      font-size: 20px;
+      font-weight: 600;
+      padding-bottom: 40px;
+    }
+    
+    .login .input{
+      
+      background-color: white;
+      border: 1px solid #fc2779;
+      width: 300px;
+      padding: 10px 20px 10px 20px;
+      margin: 20px;
+      height: 50px;
+      border-radius:5px;
+    
+      
+      
+      
+      
+    }
+    .custom-phone-input::placeholder {
+      color: #999;
+    }
+     
+    .login button{
+        background-color: #e80071;
+        color: white;
+        padding: 10px 14px 10px 14px;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .login button:hover{
+        background-color: #861c4d;
+        transition:0.3s;
+        
+    }
+    .login button:active{
+       background-color: white;
+       color: #e80071;
+       
+       
+    }
+      

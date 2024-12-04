@@ -42,10 +42,10 @@ const AddProduct = () => {
         </div>
         <div>
           <a className="navbar-brand brand-logo" href="index.html">
-            <img src="./src/assets/images/logo.svg" alt="logo" />
+            <img src="https://demo.bootstrapdash.com/star-admin2-free/template/images/logo.svg" alt="logo" />
           </a>
           <a className="navbar-brand brand-logo-mini" href="index.html">
-            <img src="./src/assets/images/logo-mini.svg" alt="logo" />
+            <img src="https://demo.bootstrapdash.com/star-admin2-free/template/images/logo-mini.svg" alt="logo" />
           </a>
         </div>
       </div>
@@ -287,7 +287,7 @@ const AddProduct = () => {
     <Link to="/login">
       <img
         className="img-xs rounded-circle"
-        src="./src/assets/images/faces/face8.jpg"
+        src="https://demo.bootstrapdash.com/star-admin2-free/template/images/faces/face8.jpg"
         alt="Profile image"
       />
     </Link>

@@ -77,7 +77,7 @@ const Register = () => {
         <div className="col-lg-4 mx-auto">
           <div className="auth-form-light text-left py-5 px-4 px-sm-5">
             <div className="brand-logo">
-              <img src="../src/assets/images/logo.svg" alt="logo" />
+              <img src="https://demo.bootstrapdash.com/star-admin2-free/template/images/logo.svg" alt="logo" />
             </div>
             <h4>New here?</h4>
             <h6 className="fw-light">

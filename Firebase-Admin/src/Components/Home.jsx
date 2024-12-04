@@ -23,10 +23,10 @@ export const Home = () => {
         </div>
         <div>
           <a className="navbar-brand brand-logo" href="index.html">
-            <img src="./src/assets/images/logo.svg" alt="logo" />
+            <img src="https://demo.bootstrapdash.com/star-admin2-free/template/images/logo.svg" alt="logo" />
           </a>
           <a className="navbar-brand brand-logo-mini" href="index.html">
-            <img src="./src/assets/images/logo-mini.svg" alt="logo" />
+            <img src="https://demo.bootstrapdash.com/star-admin2-free/template/images/logo-mini.svg" alt="logo" />
           </a>
         </div>
       </div>
@@ -244,7 +244,7 @@ export const Home = () => {
               <a className="dropdown-item preview-item">
                 <div className="preview-thumbnail">
                   <img
-                    src="./src/assets/images/faces/face1.jpg"
+                    src="https://demo.bootstrapdash.com/star-admin2-free/template/images/faces/face1.jpg"
                     alt="image"
                     className="img-sm profile-pic"
                   />
@@ -268,41 +268,12 @@ export const Home = () => {
     <Link to="/login">
       <img
         className="img-xs rounded-circle"
-        src="./src/assets/images/faces/face8.jpg"
+        src="https://demo.bootstrapdash.com/star-admin2-free/template/images/faces/face8.jpg"
         alt="Profile image"
       />
     </Link>
   </p>
-  {/* <div
-    className="dropdown-menu dropdown-menu-right navbar-dropdown"
-    aria-labelledby="UserDropdown"
-  >
-    <div className="dropdown-header text-center">
-      <img
-        className="img-md rounded-circle"
-        src="./src/assets/images/faces/face8.jpg"
-        alt="Profile image"
-      />
-      <p className="mb-1 mt-3 fw-semibold">Allen Moreno</p>
-      <p className="fw-light text-muted mb-0">allenmoreno@gmail.com</p>
-    </div>
-    <a className="dropdown-item">
-      <i className="dropdown-item-icon mdi mdi-account-outline text-primary me-2" /> My Profile{" "}
-      <span className="badge badge-pill badge-danger">1</span>
-    </a>
-    <a className="dropdown-item">
-      <i className="dropdown-item-icon mdi mdi-message-text-outline text-primary me-2" /> Messages
-    </a>
-    <a className="dropdown-item">
-      <i className="dropdown-item-icon mdi mdi-calendar-check-outline text-primary me-2" /> Activity
-    </a>
-    <a className="dropdown-item">
-      <i className="dropdown-item-icon mdi mdi-help-circle-outline text-primary me-2" /> FAQ
-    </a>
-    <a className="dropdown-item">
-      <i className="dropdown-item-icon mdi mdi-power text-primary me-2" /> Sign Out
-    </a>
-  </div> */}
+ 
 </li>
 
         </ul>
@@ -347,16 +318,16 @@ export const Home = () => {
             </a>
           </li> */}
           <li className="nav-item">
-            <a className="nav-link" href="docs/documentation.html">
+            <a className="nav-link">
             <i className="menu-icon mdi mdi-account-circle-outline" />
-              <span className="menu-title">Add user</span>
+             <Link to={'/adduser'}> <span className="menu-title">Add user</span></Link>
             </a>
           </li>
 
           <li className="nav-item">
-            <a className="nav-link" href="docs/documentation.html">
+            <a className="nav-link">
             <i className="menu-icon mdi mdi-logout" />
-              <span className="menu-title">Logout</span>
+             <Link to={'/'}> <span className="menu-title">Logout</span></Link>
             </a>
           </li>
           <br /><br />
@@ -948,7 +919,7 @@ export const Home = () => {
                                         <td>
                                           <div className="d-flex ">
                                             <img
-                                              src="./src/assets/images/faces/face1.jpg"
+                                              src="https://demo.bootstrapdash.com/star-admin2-free/template/images/faces/face1.jpg"
                                               alt=""
                                             />
                                             <div>
@@ -1003,7 +974,7 @@ export const Home = () => {
                                         <td>
                                           <div className="d-flex">
                                             <img
-                                              src="./src/assets/images/faces/face2.jpg"
+                                              src="https://demo.bootstrapdash.com/star-admin2-free/template/images/faces/face2.jpg"
                                               alt=""
                                             />
                                             <div>
@@ -1058,7 +1029,7 @@ export const Home = () => {
                                         <td>
                                           <div className="d-flex">
                                             <img
-                                              src="./src/assets/images/faces/face3.jpg"
+                                              src="https://demo.bootstrapdash.com/star-admin2-free/template/images/faces/face3.jpg"
                                               alt=""
                                             />
                                             <div>
@@ -1113,7 +1084,7 @@ export const Home = () => {
                                         <td>
                                           <div className="d-flex">
                                             <img
-                                              src="./src/assets/images/faces/face4.jpg"
+                                              src="https://demo.bootstrapdash.com/star-admin2-free/template/images/faces/face4.jpg"
                                               alt=""
                                             />
                                             <div>
@@ -1168,7 +1139,7 @@ export const Home = () => {
                                         <td>
                                           <div className="d-flex">
                                             <img
-                                              src="./src/assets/images/faces/face5.jpg"
+                                              src="https://demo.bootstrapdash.com/star-admin2-free/template/images/faces/face5.jpg"
                                               alt=""
                                             />
                                             <div>
@@ -1618,7 +1589,7 @@ export const Home = () => {
                                         <div className="d-flex">
                                           <img
                                             className="img-sm rounded-10"
-                                            src="./src/assets/images/faces/face1.jpg"
+                                            src="https://demo.bootstrapdash.com/star-admin2-free/template/images/faces/face1.jpg"
                                             alt="profile"
                                           />
                                           <div className="wrapper ms-3">
@@ -1639,7 +1610,7 @@ export const Home = () => {
                                         <div className="d-flex">
                                           <img
                                             className="img-sm rounded-10"
-                                            src="./src/assets/images/faces/face2.jpg"
+                                            src="https://demo.bootstrapdash.com/star-admin2-free/template/images/faces/face2.jpg"
                                             alt="profile"
                                           />
                                           <div className="wrapper ms-3">
@@ -1660,7 +1631,7 @@ export const Home = () => {
                                         <div className="d-flex">
                                           <img
                                             className="img-sm rounded-10"
-                                            src="./src/assets/images/faces/face3.jpg"
+                                            src="https://demo.bootstrapdash.com/star-admin2-free/template/images/faces/face3.jpg"
                                             alt="profile"
                                           />
                                           <div className="wrapper ms-3">
@@ -1681,7 +1652,7 @@ export const Home = () => {
                                         <div className="d-flex">
                                           <img
                                             className="img-sm rounded-10"
-                                            src="./src/assets/images/faces/face4.jpg"
+                                            src="https://demo.bootstrapdash.com/star-admin2-free/template/images/faces/face4.jpg"
                                             alt="profile"
                                           />
                                           <div className="wrapper ms-3">
@@ -1702,7 +1673,7 @@ export const Home = () => {
                                         <div className="d-flex">
                                           <img
                                             className="img-sm rounded-10"
-                                            src="./src/assets/images/faces/face5.jpg"
+                                            src="https://demo.bootstrapdash.com/star-admin2-free/template/images/faces/face5.jpg"
                                             alt="profile"
                                           />
                                           <div className="wrapper ms-3">

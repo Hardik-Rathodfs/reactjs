@@ -343,16 +343,16 @@ function SingleEditProduct() {
           </li>
           
           <li className="nav-item">
-            <a className="nav-link" href="docs/documentation.html">
+            <a className="nav-link">
             <i className="menu-icon mdi mdi-account-circle-outline" />
-              <span className="menu-title">Add user</span>
+            <Link to={'/adduser'}> <span className="menu-title">Add user</span></Link>
             </a>
           </li>
 
           <li className="nav-item">
-            <a className="nav-link" href="docs/documentation.html">
+            <a className="nav-link">
             <i className="menu-icon mdi mdi-logout" />
-              <span className="menu-title">Logout</span>
+            <Link to={'/'}> <span className="menu-title">Logout</span></Link>
             </a>
           </li>
           <br /><br />

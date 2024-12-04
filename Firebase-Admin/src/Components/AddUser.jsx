@@ -3,7 +3,7 @@ import { addData } from '../Redux/Product/action';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 
-const AddProduct = () => {
+const AddUser = () => {
     const [title,setTitle] = useState("");
     const [price,setPrice] = useState("");
     const [img,setImage] = useState("")
@@ -24,8 +24,8 @@ const AddProduct = () => {
             price,
             img,
         }
-        dispatch(addData)(obj)
-        navigate('/product')
+        // dispatch(addData)(obj)
+        navigate('/')
     }
   return (
     <div>
@@ -333,7 +333,7 @@ const AddProduct = () => {
           <li className="nav-item">
             <a className="nav-link">
             <i className="menu-icon mdi mdi-account-circle-outline" />
-            <Link to={'/adduser'}> <span className="menu-title">Add user</span></Link>
+            <Link to={'/adduser'}> <span className="menu-title">Add User</span></Link>
             </a>
           </li>
 
@@ -534,69 +534,47 @@ const AddProduct = () => {
           </li>
         </ul>
       </nav>
-      <form className="product-form" onSubmit={handleSubmit}>
+      <form className="product-formm" onSubmit={handleSubmit}>
   <input
     type="text"
-    placeholder="Title"
+    placeholder="Name"
     className="input-field"
     onChange={(e) => setTitle(e.target.value)}
   />
   <input
     type="text"
-    placeholder="Price"
+    placeholder="Email"
     className="input-field"
     onChange={(e) => setPrice(e.target.value)}
   />
-  <input
+
+    <input
     type="text"
-    placeholder="Image URL"
-    className="input-field"
-    onChange={(e) => setImage(e.target.value)}
-  />
-  <input
-    type="text"
-    placeholder="Offer Price"
-    className="input-field"
-    onChange={(e) => setdiscountprice(e.target.value)}
-  />
-  
-  <textarea
-    placeholder="Description"
-    className="textarea-field"
-    onChange={(e) =>setdescription(e.target.value)}
-  />
-  <input
-    type="text"
-    placeholder="Rating"
+    placeholder="Password"
     className="input-field"
     onChange={(e) =>setrating(e.target.value)}
   />
   <input
     type="text"
-    placeholder="Category"
+    placeholder="Mobile No."
     className="input-field"
-    onChange={(e) =>setcat(e.target.value)}
+    onChange={(e) => setdiscountprice(e.target.value)}
   />
-  <input
-    type="text"
-    placeholder="Brand"
-    className="input-field"
-    onChange={(e) =>setbrand(e.target.value)}
-  />
+  
+  
+
   <input type="submit" className="submit-btn" value="Submit" />
 </form>
 
-<div className="display-product">
+<div className="display-productt">
   <>
-    <img src={img} alt={img} className="product-imagee" />
+   
     <div className="product-detail">
-      <h6><b>Title:</b> {title}</h6>
-      <h6><b>Price:</b> ₹{price}</h6>
-      <h6><b>Discount:</b> ₹{discountprice}</h6>
-      <h6><b>Description:</b> {des}</h6>
-      <h6><b>Rating:</b> {rating} ★</h6>
-      <h6><b>Category:</b> {cat}</h6>
-      <h6><b>Brand:</b> {brand}</h6>
+      <h6><b>Name:</b> {title}</h6>
+      <h6><b>Email</b> {price}</h6>
+      <h6><b>Password</b> {rating}</h6>
+      <h6><b>Mobile No.</b> {discountprice}</h6>
+      
     </div>
   </>
 </div>
@@ -608,4 +586,4 @@ const AddProduct = () => {
   )
 }
 
-export default AddProduct
+export default AddUser

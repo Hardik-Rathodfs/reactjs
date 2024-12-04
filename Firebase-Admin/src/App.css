@@ -265,3 +265,35 @@
     color: #6c63ff;
   }
   
+
+  .product-formm {
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f4f4f9;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .display-productt {
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    width: 20%;
+    height: 200px;
+    padding: 20px;
+    margin: 20px 0;
+    margin-right: 35px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .display-productt:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
